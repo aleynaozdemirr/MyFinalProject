@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WV+M7aoG55Zsai6Tenm1zdgVJFexkhtD40QIC+u8yiZ8xvLyKLe3kLWUjuSKDPG4Q0qgRYEV001pRjTKia6kVw==",
+  "dgSpecHash": "4Kj7URGLZyQagV6uozMdZOuxcjy5qPk3jtr0AS7wB/rRWd0aSs9rXQite0LkHUBA5qB4IeduIrH11jhlNrZPDA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\MyFinalProject-master\\ConsoleUI\\ConsoleUI.csproj",
+  "projectFilePath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\edit\\MyFinalProject-master\\ConsoleUI\\ConsoleUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\selma\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\selma\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

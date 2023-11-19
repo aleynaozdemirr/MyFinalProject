@@ -975,11 +975,27 @@
           "bin/placeholder/Business.dll": {}
         }
       },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.13",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
       "DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "Core": "1.0.0",
           "Entities": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.13",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13"
         },
         "compile": {
@@ -992,6 +1008,9 @@
       "Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Entities.dll": {}
         },
@@ -2653,6 +2672,11 @@
       "path": "../Business/Business.csproj",
       "msbuildProject": "../Business/Business.csproj"
     },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
+    },
     "DataAccess/1.0.0": {
       "type": "project",
       "path": "../DataAccess/DataAccess.csproj",
@@ -2667,6 +2691,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Business >= 1.0.0",
+      "Core >= 1.0.0",
       "DataAccess >= 1.0.0",
       "Entities >= 1.0.0"
     ]
@@ -2677,11 +2702,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\selma\\OneDrive\\Masaüstü\\MyFinalProject-master\\ConsoleUI\\ConsoleUI.csproj",
+      "projectUniqueName": "C:\\Users\\selma\\OneDrive\\Masaüstü\\edit\\MyFinalProject-master\\ConsoleUI\\ConsoleUI.csproj",
       "projectName": "ConsoleUI",
-      "projectPath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\MyFinalProject-master\\ConsoleUI\\ConsoleUI.csproj",
+      "projectPath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\edit\\MyFinalProject-master\\ConsoleUI\\ConsoleUI.csproj",
       "packagesPath": "C:\\Users\\selma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\MyFinalProject-master\\ConsoleUI\\obj\\",
+      "outputPath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\edit\\MyFinalProject-master\\ConsoleUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\selma\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2698,14 +2723,17 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\selma\\OneDrive\\Masaüstü\\MyFinalProject-master\\Business\\Business.csproj": {
-              "projectPath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\MyFinalProject-master\\Business\\Business.csproj"
+            "C:\\Users\\selma\\OneDrive\\Masaüstü\\edit\\MyFinalProject-master\\Business\\Business.csproj": {
+              "projectPath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\edit\\MyFinalProject-master\\Business\\Business.csproj"
             },
-            "C:\\Users\\selma\\OneDrive\\Masaüstü\\MyFinalProject-master\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\MyFinalProject-master\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\selma\\OneDrive\\Masaüstü\\edit\\MyFinalProject-master\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\edit\\MyFinalProject-master\\Core\\Core.csproj"
             },
-            "C:\\Users\\selma\\OneDrive\\Masaüstü\\MyFinalProject-master\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\MyFinalProject-master\\Entities\\Entities.csproj"
+            "C:\\Users\\selma\\OneDrive\\Masaüstü\\edit\\MyFinalProject-master\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\edit\\MyFinalProject-master\\DataAccess\\DataAccess.csproj"
+            },
+            "C:\\Users\\selma\\OneDrive\\Masaüstü\\edit\\MyFinalProject-master\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\edit\\MyFinalProject-master\\Entities\\Entities.csproj"
             }
           }
         }

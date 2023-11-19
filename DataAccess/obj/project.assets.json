@@ -961,9 +961,26 @@
           }
         }
       },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.13",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
       "Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Entities.dll": {}
         },
@@ -2620,6 +2637,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
+    },
     "Entities/1.0.0": {
       "type": "project",
       "path": "../Entities/Entities.csproj",
@@ -2628,7 +2650,9 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Core >= 1.0.0",
       "Entities >= 1.0.0",
+      "Microsoft.EntityFrameworkCore >= 7.0.13",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.13"
     ]
   },
@@ -2638,11 +2662,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\selma\\OneDrive\\Masaüstü\\MyFinalProject-master\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\selma\\OneDrive\\Masaüstü\\edit\\MyFinalProject-master\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\MyFinalProject-master\\DataAccess\\DataAccess.csproj",
+      "projectPath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\edit\\MyFinalProject-master\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\selma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\MyFinalProject-master\\DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\edit\\MyFinalProject-master\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\selma\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2659,8 +2683,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\selma\\OneDrive\\Masaüstü\\MyFinalProject-master\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\MyFinalProject-master\\Entities\\Entities.csproj"
+            "C:\\Users\\selma\\OneDrive\\Masaüstü\\edit\\MyFinalProject-master\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\edit\\MyFinalProject-master\\Core\\Core.csproj"
+            },
+            "C:\\Users\\selma\\OneDrive\\Masaüstü\\edit\\MyFinalProject-master\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\selma\\OneDrive\\Masaüstü\\edit\\MyFinalProject-master\\Entities\\Entities.csproj"
             }
           }
         }
@@ -2675,6 +2702,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[7.0.13, )"
+          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[7.0.13, )"
